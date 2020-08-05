@@ -1,21 +1,31 @@
 const diff = document.title;
 let guessCount;
+let ans;
 
 if (diff == 'Easy') {
     easySpawn();
+    ans = rand(1,11);
 } else if ( diff == 'Medium') {
     medSpawn();
+    ans = rand(1,101);
 } else {
     hardSpawn();
+    ans = rand(1,1001);
 }
 
-function resetCounter() {
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+function resetGame() {
     guessCount = 0;
     document.getElementById('guessCount').innerHTML = 
     `Guesses : ${guessCount}`;
 }
 
-function updateCounter() {
+function updateGame() {
     document.getElementById('guessCount').innerHTML = 
     `Guesses : ${guessCount += 1}`;
 }
@@ -30,10 +40,9 @@ function easySpawn() {
             click(e.target.id);
         });
     }
-    resetCounter();
+    resetGame();
 }
 
 function click(i) {
-    console.log(i);
-    updateCounter();
+    updateGame();
 }
