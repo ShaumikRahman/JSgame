@@ -1,4 +1,4 @@
-const diff = document.title;
+let diff = document.title;
 let guessCount;
 let ans;
 let first, last;
@@ -55,6 +55,22 @@ function easySpawn() {
     document.getElementById('again').hidden = true;
     first = 1;
     last = 10;
+}
+
+function medSpawn() {
+    for (let i = 1; i <= 100; i++) {
+        document.getElementById('buttonBox').innerHTML += 
+        `<button class="btn btn-primary col-sm-1 m-1" id="${i}">${i}</button>`;
+    }
+    for (let i = 1; i <= 100; i++) {
+        document.getElementById(`${i}`).addEventListener('click', (e) => {
+            click(e.target.id);
+        });
+    }
+    resetCounter();
+    document.getElementById('again').hidden = true;
+    first = 1;
+    last = 100;
 }
 
 function numberIsCorrect(x) {
