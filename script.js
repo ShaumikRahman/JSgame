@@ -73,6 +73,22 @@ function medSpawn() {
     last = 100;
 }
 
+function hardSpawn() {
+    for (let i = 1; i <= 1000; i++) {
+        document.getElementById('buttonBox').innerHTML += 
+        `<button class="btn btn-primary col-sm-1 m-1" id="${i}">${i}</button>`;
+    }
+    for (let i = 1; i <= 1000; i++) {
+        document.getElementById(`${i}`).addEventListener('click', (e) => {
+            click(e.target.id);
+        });
+    }
+    resetCounter();
+    document.getElementById('again').hidden = true;
+    first = 1;
+    last = 1000;
+}
+
 function numberIsCorrect(x) {
     if (x == ans) {return true}
     else return false;

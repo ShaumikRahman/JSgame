@@ -7,15 +7,26 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
-    <title>JSgame</title>
+    <title>Hard</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="index.html">Home</a>
     </nav>
     <div class="container my-5">
-        
+        <h1 class="text-center" id="text">
+            Guess the number
+        </h1>
     </div>
+    <div class="container d-flex justify-content-around mx-auto row no-gutters" id="buttonBox">
 
+    </div>
+    <h4 class="text-center my-5" id="guessCount">Guesses : 0</h4>
+    <div class="container d-flex justify-content-center">
+        <button class="btn btn-primary" id="again">
+            Play Again?
+        </button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
