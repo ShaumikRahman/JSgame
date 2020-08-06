@@ -91,13 +91,13 @@ function continueGame(z) {
         for (let i = click; i <= last; i++) {
             document.getElementById(`${i}`).remove();
         }
-        last = click - 1
+        last = --click;
         document.getElementById('text').innerHTML = 'Lower';
     } else {
         for (let i = click; i >= first; i--) {
             document.getElementById(`${i}`).remove();
         }
-        first = click + 1
+        first = ++click;
         document.getElementById('text').innerHTML = 'Higher';
     }
 }
